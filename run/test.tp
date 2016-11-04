@@ -1,0 +1,32 @@
+DomainInfo {
+  GlobalOrigin    = ( 0.0,   0.0,    0.0  )
+  GlobalGrid      = ( 501,   251,    201   )
+  GlobalRegion    = ( 10.0,  5.0,    4.0  )
+  //GlobalDivision  = ( 1,     1,      1    )
+}
+
+
+Parameter {
+  BOX {
+    MIN = ( 101, 101, 1  )
+    MAX = ( 151, 151, 51 )
+  }
+  Reynolds     = 1.0e+4
+  Alpha        = 0.5
+  IterationMax = 100
+  Omega        = 0.9
+  Epsilon      = 0.001
+  SmagorinSky_Constant = 0.1
+}
+
+
+TimeControl {
+  Restart    = "initial"
+  LastStep   = 500
+  DeltaT     = 0.001
+
+  Interval_Pressure_History = 100
+  Interval_Vis_Output       = 100
+  Interval_Log_Output       = 100
+}
+
